@@ -1,0 +1,14 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Sessions du cours {{ cours.module }}</h1>
+    <div class="sessions-list">
+        {% for session in cours.sessions %}
+            <div class="session-item">
+                <p>Date: {{ session.date|date('d/m/Y') }}</p>
+                <p>Horaire: {{ session.heureDebut|date('H:i') }} - {{ session.heureFin|date('H:i') }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

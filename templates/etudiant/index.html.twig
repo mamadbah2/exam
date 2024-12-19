@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Classe de {{ etudiant.prenom }} {{ etudiant.nom }}</h1>
+    <div class="classe-info">
+        <h2>{{ classe.nom }}</h2>
+        <p>Niveau: {{ classe.niveau }}</p>
+    </div>
+{% endblock %}

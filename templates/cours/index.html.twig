@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cours de la classe {{ classe.nom }}</h1>
+    <div class="cours-list">
+        {% for cours in classe.cours %}
+            <div class="cours-item">
+                <h2>{{ cours.module }}</h2>
+                <p>Professeur: {{ cours.professeurs.nom }} {{ cours.professeurs.prenom }}</p>
+                <a href="{{ path('cours_sessions', {'id': cours.id}) }}">Voir les sessions</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
